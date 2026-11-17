@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>뽀모도로 타이머</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1>🍅 뽀모도로 타이머</h1>
+      <div class="modes">
+        <button data-mode="focus" class="active">집중 25분</button>
+        <button data-mode="short">짧은 휴식 5분</button>
+        <button data-mode="long">긴 휴식 15분</button>
+      </div>
+      <div class="ring">
+        <svg width="220" height="220" viewBox="0 0 220 220">
+          <circle
+            class="track"
+            cx="110"
+            cy="110"
+            r="100"
+            fill="none"
+            stroke-width="12"
+          />
+          <circle
+            class="bar"
+            id="bar"
+            cx="110"
+            cy="110"
+            r="100"
+            fill="none"
+            stroke-width="12"
+          />
+        </svg>
+        <div class="time" id="time">25:00</div>
+      </div>
+      <div class="controls">
+        <button id="start">시작</button>
+        <button id="stop">정지</button>
+        <button id="reset">초기화</button>
+      </div>
+      <div class="count">완료한 뽀모도로: <span id="done">0</span></div>
+      <button onclick="location.href='setting.html'">설정</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
